@@ -3,6 +3,7 @@ import Section from 'components/Section';
 import Statistics from 'components/Statistics';
 import FeedbackOptions from 'components/FeedbackOptions';
 import Notification from 'components/Notification';
+import { Container } from './App.styled';
 
 class App extends Component {
   state = {
@@ -12,7 +13,7 @@ class App extends Component {
   };
 
   onLeaveFeedback = event => {
-    const stateOption = event.target.textContent;
+    const stateOption = event.target.value;
     this.setState(prevState => ({
       [stateOption]: prevState[stateOption] + 1,
     }));
@@ -41,7 +42,7 @@ class App extends Component {
     const options = Object.keys(this.state);
 
     return (
-      <>
+      <Container>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={options}
@@ -62,7 +63,7 @@ class App extends Component {
             <Notification message="There is no feedback"></Notification>
           )}
         </Section>
-      </>
+      </Container>
     );
   }
 }
