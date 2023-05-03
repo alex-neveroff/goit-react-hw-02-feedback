@@ -9,12 +9,15 @@ export const FeedbackList = styled.ul`
 export const ListItem = styled.li`
   display: flex;
   justify-content: space-between;
+`;
+
+export const FeedbackName = styled.p`
   font-size: 24px;
 `;
 
-export const FeedbackName = styled.p``;
-
 export const Quantity = styled.p`
   width: 60px;
+  font-size: 24px;
+  font-weight: bold;
   text-align: center;
 `;
