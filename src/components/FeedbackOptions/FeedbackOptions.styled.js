@@ -24,7 +24,6 @@ export const Button = styled.button`
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
   }
   background-color: ${({ value }) => {
-    console.log(value);
     switch (value) {
       case 'good':
         return '#98FB98';
